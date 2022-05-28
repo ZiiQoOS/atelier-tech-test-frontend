@@ -1,0 +1,3 @@
+<div *ngFor="let player of players">
+  <player-info (click)="showPlayerDetails(player.id)" [player]="player"></player-info>
+</div>

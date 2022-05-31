@@ -1,3 +1,6 @@
-<div *ngFor="let player of players">
+<mat-form-field class="player-name-input" appearance="fill">
+  <input matInput type="text" [(ngModel)]="playerNameSearch" placeholder="Rechercher un joueur" autocomplete="off">
+</mat-form-field>
+<div *ngFor="let player of players | search: 'fullName' : playerNameSearch">
   <player-info (click)="showPlayerDetails(player.id)" [player]="player"></player-info>
 </div>

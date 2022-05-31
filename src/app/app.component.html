@@ -1,3 +1,6 @@
 <div>
-  <players-list [players]="players$ | async"></players-list>
+  <div class="container">
+    <players-list [players]="players$ | async" ngClass="player-list"></players-list>
+    <statistics-card [statistics]="stats$ | async" ngClass="statistics-card"></statistics-card>
+  </div>
 </div>

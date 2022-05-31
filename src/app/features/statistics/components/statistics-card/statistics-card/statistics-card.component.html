@@ -1,0 +1,25 @@
+<div class="stats-container">
+  <h2 class="title">Statistics</h2>
+  <div class="stats-wrapper" *ngIf="statistics">
+    <div class="index">
+      <p>
+        <img [src]="statistics.topRatioCountry.flag" matTooltip="Le pays avec le plus grand ratio de parties gagnées"
+          ngClass="flag">
+      </p>
+    </div>
+    <div class="index">
+      <p ngClass="index-value" matTooltip="L'IMC moyen des joueurs"
+        matTooltipPosition="below">{{ statistics.medianHeightPlayers }} cm</p>
+      <p ngClass="index-title">
+        Median height
+      </p>
+    </div>
+    <div class="index">
+      <p ngClass="index-value" matTooltip="La médiane de la taille des joueurs" matTooltipPosition="below">
+        {{ statistics.meanPlayersBMI }}</p>
+      <p ngClass="index-title">
+        Average BMI
+      </p>
+    </div>
+  </div>
+</div>

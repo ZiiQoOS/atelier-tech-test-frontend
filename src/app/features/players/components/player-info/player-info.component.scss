@@ -1,0 +1,155 @@
+.image-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 40%;
+
+  img {
+    width: 200px;
+    margin: auto;
+  }
+}
+
+.player-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.player-name {
+  color: var(--orange);
+  font-family: Montserrat-Bold;
+  padding-top: 5px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.player-first-name {
+  margin-right: 5px;
+}
+
+.player-info {
+  background-color: white;
+  display: flex;
+  height: 150px;
+  box-shadow: var(--default-box-shadow);
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.player-info-margins {
+  margin-bottom: 25px;
+  padding-bottom: 0;
+  padding-top: 5px;
+}
+
+.other-player-details {
+  display: flex;
+
+  .label {
+    text-transform: uppercase;
+    color: var(--black-30);
+    margin-bottom: 2px;
+    font-family: Mulish-Bold;
+    margin-right: 10px;
+    letter-spacing: 1px;
+  }
+
+  .content {
+    color: var(--orange);
+    font-family: Montserrat-Bold;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .image-wrapper {
+    width: 35%;
+
+    img {
+      width: 185px;
+      margin: auto;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  .image-wrapper {
+    width: 40%;
+
+    img {
+      width: 200px;
+      margin: auto;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .image-wrapper {
+    width: 40%;
+
+    img {
+      width: 180px;
+      margin: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .image-wrapper {
+    width: 45%;
+
+    img {
+      width: 200px;
+      margin: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1000px) {
+  .image-wrapper {
+
+    img {
+      width: 150px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .image-wrapper {
+
+    img {
+      width: 120%;
+    }
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .image-wrapper {
+    display: none;
+  }
+
+  .player-info-margins {
+    padding-left: 8vw;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .image-wrapper {
+
+    img {
+      width: 108px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .image-container {
+
+    img {
+      width: 158px;
+    }
+  }
+}

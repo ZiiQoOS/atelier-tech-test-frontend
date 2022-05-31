@@ -1,0 +1,286 @@
+.player-image {
+  width: 35%;
+  position: absolute;
+  left: 0;
+  top: 10vh;
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+.image-wrapper {
+  height: 0;
+}
+
+.progress-spinner {
+  margin: auto;
+  top: 30vh;
+}
+
+.player-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.player-country-flag {
+  margin-top: 5vh;
+}
+
+.country-flag-img {
+  box-shadow: var(--default-box-shadow);
+  height: 10vh;
+}
+
+.country-code {
+  text-transform: uppercase;
+  color: var(--black-30);
+  font-family: Mulish-thin;
+  text-align: center;
+  letter-spacing: 14px;
+  font-size: 5vh;
+  padding-top: 3vh;
+
+}
+
+.player-name {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  margin-left: 13vh;
+  font-size: 7vw;
+  font-weight: 600;
+  font-family: Montserrat-Bold;
+
+  .player-first-name {
+    margin-bottom: 6vh;
+    padding-bottom: 3vh;
+  }
+
+  .player-last-name {
+    color: var(--orange);
+    font-weight: 700;
+  }
+
+  @supports (-webkit-text-stroke: 1px var(--orange)) {
+    .player-first-name {
+      -webkit-text-stroke: 4px var(--orange);
+      -webkit-text-fill-color: white;
+    }
+  }
+
+}
+
+.player-detail-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.other-player-details {
+  display: flex;
+  flex-direction: row;
+  width: 66%;
+  align-self: center;
+  justify-content: space-between;
+  padding-left: 25vw;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 40px;
+  row-gap: 40px;
+  max-height: 0vh
+}
+
+.label {
+  text-transform: uppercase;
+  color: var(--black-30);
+  margin-bottom: 2px;
+  font-family: Mulish-Bold;
+  margin-right: 10px;
+  letter-spacing: 2px;
+}
+
+.content {
+  color: var(--orange);
+  font-family: Montserrat-Bold;
+}
+
+.career-titles {
+  color: var(--orange);
+
+  .title-date {
+
+    .title-year {
+      font-family: Montserrat-Bold;
+    }
+
+    .title-month {
+      font-family: Mulish-thin;
+    }
+  }
+
+  .title-content {
+    font-family: Mulish-SemiBold;
+
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .player-image {
+    left: 15vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .details-grid {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+  }
+
+  .other-player-details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  .other-player-details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-self: center;
+    justify-content: space-between;
+    padding-left: 0;
+  }
+
+  .player-name {
+    margin-top: 23vh;
+    margin-bottom: 2vh;
+    margin-left: -4vh;
+    font-size: 7vw;
+    font-weight: 600;
+    font-family: Montserrat-Bold;
+
+    .player-first-name {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    @supports (-webkit-text-stroke: 1px var(--orange)) {
+      .player-first-name {
+        -webkit-text-stroke: 1px var(--orange);
+        -webkit-text-fill-color: white;
+      }
+    }
+  }
+
+  .player-country-flag {
+    margin-top: 23vh;
+  }
+
+  .country-flag-img {
+    box-shadow: var(--default-box-shadow);
+    height: 4vh;
+  }
+
+  .country-code {
+    display: none;
+  }
+
+  .player-image {
+    width: 33%;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 800px) {
+  .image-wrapper {
+    height: 0;
+  }
+
+  .player-image {
+    width: 20%;
+    margin: auto;
+    display: flex;
+    position: relative;
+    top: -3vh;
+  }
+}
+
+
+
+@media only screen and (min-width: 375px) and (max-width: 410px) {
+
+
+  .player-image {
+    width: 40%;
+    left: -1vh;
+  }
+}
+
+@media only screen and (min-width: 410px) and (max-width: 600px) {
+
+
+  .player-image {
+    width: 26%;
+    left: -1vh;
+  }
+}
+
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+
+  .player-first-name {
+    margin-bottom: 2vh !important;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+
+  .player-first-name {
+    margin-bottom: 4vh !important;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+
+  .image-wrapper {
+    height: 0;
+  }
+
+  .player-image {
+    position: relative;
+    display: flex;
+    margin: auto;
+    left: 0;
+    top: 0;
+    width: 57%;
+    top: -3vh;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 4vh;
+
+  mat-icon {
+    color: white;
+    cursor: pointer;
+    transform: scale(3);
+  }
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: center;
+}

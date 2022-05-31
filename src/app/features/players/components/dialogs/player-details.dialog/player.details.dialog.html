@@ -1,0 +1,99 @@
+<div class="dialog-header">
+  <div class="close-button">
+    <mat-icon class="close-icon" (click)="closeDialog()" [inline]="true">close</mat-icon>  
+  </div>
+</div>
+<div ngClass="player-info player-info-margins" >
+  <mat-progress-spinner class="progress-spinner" [color]="'accent'" [mode]="'indeterminate'" *ngIf="loading">
+  </mat-progress-spinner>
+  <ng-container *ngIf="!loading">
+    <div class="image-wrapper">
+      <img ngClass="player-image" [src]="player?.picture">
+    </div>
+    <div ngClass="player-detail">
+      <div class="player-header">
+        <div ngClass="player-name">
+          <p ngClass="player-first-name">{{ player?.firstName }}</p>
+          <p ngClass="player-last-name">{{ player?.lastName }}</p>
+        </div>
+        <div class="player-country-flag">
+          <img ngClass="country-flag-img" [src]="player?.country?.picture">
+          <div ngClass="country-code">{{player?.country?.code}}</div>
+        </div>
+      </div>
+      <div ngClass="other-player-details">
+        <div class="details-grid">
+          <div>
+            <p ngClass="label">Rank</p>
+            <p ngClass="content"> #{{ player?.rank }} </p>
+          </div>
+          <div>
+            <p ngClass="label">Points</p>
+            <p ngClass="content"> {{ player?.points }} </p>
+          </div>
+          <div>
+            <p ngClass="label">Country</p>
+            <p ngClass="content"> {{ player?.country?.name }}</p>
+          </div>
+          <div>
+            <p ngClass="label">Birthday</p>
+            <p ngClass="content"> {{ player?.birthDate }} </p>
+          </div>
+          <div>
+            <p ngClass="label">Age</p>
+            <p ngClass="content"> {{ player?.age }} </p>
+          </div>
+          <div>
+          </div>
+          <div>
+            <p ngClass="label">Weight</p>
+            <p ngClass="content">{{ player?.weight }} kg</p>
+          </div>
+          <div>
+            <p ngClass="label">Height</p>
+            <p ngClass="content"> {{ player?.height }} cm </p>
+          </div>
+        </div>
+        <div class="career-titles">
+          <p class="label">Career titles</p>
+          <div>
+            <div class="career-title">
+              <div class="title-date">
+                <span class="title-year">2021</span>
+                -
+                <span class="title-month">5</span>
+              </div>
+              <p class="title-content">ATP Masters 1000 Paris (Indoor/Hard)</p>
+              <p class="title-content">Roland Garros (Outdoor/Clay)</p>
+              <p class="title-content">Belgrade 2 (Outdoor/Clay)</p>
+              <p class="title-content">Australian Open (Outdoor/Hard)</p>
+            </div>
+            <div class="career-title">
+              <div class="title-date">
+                <span class="title-year">2020</span>
+                -
+                <span class="title-month">4</span>
+              </div>
+              <p class="title-content">AlP Masters 1000 Rome (Outdoor/Clay</p>
+              <p class="title-content">ATP Masters 1000 Cincinnati (Outdoor/Hard)</p>
+              <p class="title-content">Dubai (Outdoor/Hard)</p>
+              <p class="title-content">Australian Open (Outdoor/Hard)</p>
+            </div>
+            <div class="career-title">
+              <div class="title-date">
+                <span class="title-year">2020</span>
+                -
+                <span class="title-month">4</span>
+              </div>
+              <p class="title-content">AlP Masters 1000 Rome (Outdoor/Clay</p>
+              <p class="title-content">ATP Masters 1000 Cincinnati (Outdoor/Hard)</p>
+              <p class="title-content">Dubai (Outdoor/Hard)</p>
+              <p class="title-content">Australian Open (Outdoor/Hard)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+</div>

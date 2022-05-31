@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IPlayer } from '../../models/player-model';
+import { IPlayer } from '../../models/Player.model';
 
 @Component({
   selector: 'player-info',

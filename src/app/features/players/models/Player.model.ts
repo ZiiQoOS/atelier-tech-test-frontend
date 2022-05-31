@@ -1,5 +1,7 @@
+import { ICountry } from './Country.model';
+
 export interface IPlayer {
-  id: string,
+  id: number,
   firstName: string,
   lastName: string,
   fullName?: string,
@@ -9,12 +11,8 @@ export interface IPlayer {
   age: number,
   weight: number,
   height: number,
-  birthYear: number,
+  birthDate: number,
   careerTitles: Array<any>,
-  country: {
-    code: string,
-    name: string,
-    picture?: string;
-  }
+  country: ICountry
 }
 

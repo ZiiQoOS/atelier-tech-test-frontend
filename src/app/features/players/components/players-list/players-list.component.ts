@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IPlayer } from '../../models/player-model';
-import { IStats } from '../../models/Stats-model';
+import { MatDialog } from '@angular/material/dialog';
+import { PlayerDetailsDialog } from '../dialogs/player-details.dialog/player-details.dialog';
+import { PlayersService } from '../../services/players-service/players.service';
 
 @Component({
   selector: 'players-list',
@@ -10,15 +11,21 @@ import { IStats } from '../../models/Stats-model';
 export class PlayersListComponent implements OnInit {
 
   @Input() players: any = [];
-  public playerName: string = '';
 
-  constructor() { }
+  public playerNameSearch: string = '';
+
+  constructor(public dialog: MatDialog) {
+
+  }
 
   ngOnInit() {
-    console.log("players", this.players);
-  }
-  showPlayerDetails(id: number) {
-    console.log(id);
   }
 
+  showPlayerDetails(id: number): void {
+    this.dialog.open(PlayerDetailsDialog, {
+      width: '100%',
+      height: '80%',
+      data: { id }
+    });
+  }
 }

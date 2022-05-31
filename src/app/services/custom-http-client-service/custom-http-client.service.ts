@@ -12,11 +12,10 @@ export class CustomHttpClientService {
   constructor(private http: HttpClient) { }
 
   get(url: string, params = {}): Observable<any> {
-    console.log("url",url);
     let options = {
       params
     }
-    return this.http.get(`${this.API_URL}/${url}`, options).pipe(
+    return this.http.get(`${this.API_URL}${url}`, options).pipe(
       catchError(err => {
         return throwError(() => new Error(err));
       })

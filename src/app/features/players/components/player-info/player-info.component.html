@@ -1,0 +1,25 @@
+<div ngClass="player-info player-info-margins">
+  <div ngClass="image-wrapper">
+    <img [src]="player?.picture">
+  </div>
+  <div ngClass="player-detail">
+    <div ngClass="player-name">
+      <span ngClass="player-first-name">{{ player?.firstName }}</span>
+      <span>{{ player?.lastName }}</span>
+    </div>
+    <div ngClass="other-player-details">
+      <div>
+        <p ngClass="label">Rank</p>
+        <p ngClass="content"> #{{ player?.rank }} </p>
+      </div>
+      <div>
+        <p ngClass="label">Points</p>
+        <p ngClass="content"> {{ player?.points }} </p>
+      </div>
+      <div>
+        <p ngClass="label">Country</p>
+        <p ngClass="content"> {{ player?.country?.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>

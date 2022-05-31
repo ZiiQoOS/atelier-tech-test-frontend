@@ -4,7 +4,7 @@ import { IPlayer } from '../../../players/models/Player.model';
 import { IStats } from '../../models/Stats.model';
 import { Observable } from 'rxjs';
 
-const API_URL = '/stats';
+const API_URL = '/statistics';
 
 @Injectable({
   providedIn: 'root'

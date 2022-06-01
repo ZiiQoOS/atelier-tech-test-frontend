@@ -1,5 +1,7 @@
+import { ICountry } from '../../players/models/Country.model';
+
 export interface IStats {
-  topRatioCountry: Array<{ ratio: number; countryCode: string; }>,
+  topRatioCountry: ICountry,
   meanPlayersBMI: number,
   medianHeightPlayers: number;
 }

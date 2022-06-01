@@ -12,7 +12,6 @@ export interface IPlayer {
   weight: number,
   height: number,
   birthDate: number,
-  careerTitles: Array<any>,
   country: ICountry
 }
 

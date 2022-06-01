@@ -3,7 +3,7 @@
 > Players Manager
 ## Requirements
 
-> For development, you will only need [Node.js](https://nodejs.org/) and a node global package, [NPM](https://npmjs.org/) or [YARN](https://yarnpkg.com/), installed in your environement.
+> For development, you will only need [Node.js](https://nodejs.org/) and a node global package manager, [NPM](https://npmjs.org/) or [YARN](https://yarnpkg.com/), installed in your environement.
 ## Install
 
     $ git clone https://github.com/ZiiQoOS/atelier-tech-test-frontend

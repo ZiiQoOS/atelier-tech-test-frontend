@@ -1,25 +1,31 @@
 <div class="stats-container">
-  <h2 class="title">Statistics</h2>
-  <div class="stats-wrapper" *ngIf="statistics">
-    <div class="index">
-      <p>
+  <mat-progress-spinner *ngIf="!statistics" class="progress-spinner" [color]="'accent'" [mode]="'indeterminate'">
+  </mat-progress-spinner>
+  <ng-container *ngIf="statistics">
+    <h2 class="title">Statistics</h2>
+    <div class="stats-wrapper">
+      <div class="index">
+        <p ngClass="index-title">
+          Top ratio country
+        </p>
         <img [src]="statistics.topRatioCountry.flag" matTooltip="Le pays avec le plus grand ratio de parties gagnées"
           ngClass="flag">
-      </p>
+      </div>
+      <div class="index">
+        <p ngClass="index-title">
+          Median height
+        </p>
+        <p ngClass="index-value" matTooltip="L'IMC moyen des joueurs" matTooltipPosition="below">
+          {{ statistics.medianHeightPlayers }} cm</p>
+      </div>
+      <div class="index">
+        <p ngClass="index-title">
+          Average BMI
+        </p>
+        <p ngClass="index-value" matTooltip="La médiane de la taille des joueurs" matTooltipPosition="below">
+          {{ statistics.meanPlayersBMI }}</p>
+      </div>
     </div>
-    <div class="index">
-      <p ngClass="index-value" matTooltip="L'IMC moyen des joueurs"
-        matTooltipPosition="below">{{ statistics.medianHeightPlayers }} cm</p>
-      <p ngClass="index-title">
-        Median height
-      </p>
-    </div>
-    <div class="index">
-      <p ngClass="index-value" matTooltip="La médiane de la taille des joueurs" matTooltipPosition="below">
-        {{ statistics.meanPlayersBMI }}</p>
-      <p ngClass="index-title">
-        Average BMI
-      </p>
-    </div>
-  </div>
+  </ng-container>
+
 </div>

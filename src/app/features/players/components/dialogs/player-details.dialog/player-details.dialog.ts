@@ -1,4 +1,4 @@
-import { Component, HostListener, Inject } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { IPlayer } from '../../../models/Player.model';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { PlayersService } from '../../../services/players-service/players.service';

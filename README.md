@@ -17,7 +17,7 @@ To run the project use the command
     $ ng serve
 
 ## Demo
-The project is deployed on [Heroku](https://heroku.com), you can find the live version on this link : [player-manager](https://atelier-tech-test-frontend.herokuapp.com//)
+The project is deployed on [Heroku](https://heroku.com), you can find the live version on this link : [player-manager](https://atelier-tech-test-frontend.herokuapp.com)
 
 
 ## Built With
